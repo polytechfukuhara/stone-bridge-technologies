@@ -6,7 +6,7 @@
 #include "esp32-hal-ledc.h"
 
 //使用自作クラス
-/*#include"Timer.h"
+#include"Timer.h"
 #include"mamoruMain.h"
 #include"Display.h"
 #include"Motor.h"
@@ -15,7 +15,7 @@
 #include"Battery.h"
 #include"Blutooth.h"
 #include"connectWifi.h"
-#include"Sleep_mode.h"*/
+#include"Sleep_mode.h"
 
 //スリープモード関数
 void Sleep_mode::SleepStart(int timeSleep, int frequency){

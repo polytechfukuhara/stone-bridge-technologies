@@ -8,6 +8,6 @@ class Timer
   volatile uint32_t isrCounter;
   
   public:
-  void IRAM_ATTR onTimer(); //タイマーを発生させるタイミングの関数をいれる
+  void onTimer(); //タイマーを発生させるタイミングの関数をいれる
   void init();
 };

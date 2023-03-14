@@ -16,12 +16,12 @@ Sleep_mode sleep_mode;
 
 void Timer::init() {
   timer = timerBegin(0, getApbFrequency() / 1000000, true);
-  timerAttachInterrupt(timer, IRAM_ATTR onTimer, true);
+  //timerAttachInterrupt(timer, &onTimer, true);
   timerAlarmWrite(timer, 1000000, true);
   timerAlarmEnable(timer);
 }
 
-void IRAM_ATTR Timer::onTimer() {
+void Timer::onTimer() {
   isrCounter++;
   if (isrCounter == 180) {
     timerEnd(timer);
