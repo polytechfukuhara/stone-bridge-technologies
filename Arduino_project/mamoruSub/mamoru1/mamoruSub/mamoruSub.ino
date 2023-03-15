@@ -29,5 +29,5 @@ void loop() {
   bthSub.BluetoothMainButtonPush(); //本体側のボタンプッシュ後処理
   dispSub.batteryShow_Setup(); //バッテリー表示
 
-  timerSub.onTimer(); //180秒カウント＆スリープ
+  //timerSub.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
 }

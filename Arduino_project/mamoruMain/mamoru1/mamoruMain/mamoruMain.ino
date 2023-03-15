@@ -61,5 +61,5 @@ void loop() {
     sleep_modeMain.SleepStart(0, 10); //スリープモード（低電圧）
 
   }
-  timerMain.onTimer(); //180秒カウント＆スリープ
+  //timerMain.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
 }
