@@ -62,4 +62,5 @@ void loop() {
 
   }
   //timerMain.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
+
 }

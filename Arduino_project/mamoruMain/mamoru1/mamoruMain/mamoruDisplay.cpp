@@ -27,6 +27,7 @@ void mamoruDisplay::Battery_Display() {
   _line_color = TFT_WHITE;
   _text_color = TFT_WHITE;
 }
+
 /**
    表示位置(x, y)と表示サイズを設定する関数
 */
@@ -148,7 +149,7 @@ void mamoruDisplay::batteryUpdate(int percent = -1) {
 
     Battery_Display();
     // 表示左上の位置x, yと表示サイズ(1-7)を設定
-    setPosAndSize(5, 5, 2);
+    setPosAndSize(5, 200, 2);
     // deleteBattery()時の塗りつぶし色を設定
     setDeleteBgColor(TFT_BLACK);
     // 電池図形と%表示の色を設定
