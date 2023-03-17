@@ -17,7 +17,7 @@ int mamoruServo_Motor::openKey(){
     ledcWrite(1, i);
     delay(50);
   }
-  lockFlg = 0;  // 開錠時は0
+  lockFlg = 1;
   return lockFlg;
 }
 
@@ -27,6 +27,6 @@ int mamoruServo_Motor::closeKey(){
     ledcWrite(1, i);
     delay(50);
   }
-  lockFlg = 1;  // 施錠時は1
+  lockFlg = 2;
   return lockFlg;
 }

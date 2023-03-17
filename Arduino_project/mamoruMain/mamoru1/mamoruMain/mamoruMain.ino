@@ -25,17 +25,17 @@ mamoruConnectWifi wifiMain;
 
 void setup() {
   M5.begin();
+  Serial.begin(115200);
   Serial.println("System Start");
+  wifiMain.init();
   bthMain.init();
   sensorMain.init();
   servoMain.init();
   timerMain.init();
-  wifiMain.init();
 }
 
 void loop() {
   M5.update();
-
   int batteryAmount = batteryMain.calcBatteryPercent(); //バッテリーの残量を調べる
 
   if (batteryAmount > 10) { //10％以上なら
@@ -45,11 +45,22 @@ void loop() {
     wifiMain.SensorSendOn(); //振動センサーを送信可能
     dispMain.batteryShow_Setup(); //バッテリー表示
 
-    boolean doorFlg = motorMain.getLockState(); //ドアの開閉状態を取得
-    if (doorFlg == true) {
+    int doorFlg = motorMain.getLockState(); //ドアの開閉状態を取得
+    
+    Serial.println(doorFlg);
+
+    //doorFlgにうまく戻り値が入らない為、現在はdoorFlg=0のみ動き
+
+    if (doorFlg == 0) {
       bthMain.BluetoothDoorOpen();    //ドアオープン
-    } else {
       bthMain.BluetoothDoorcloseRestart();    //ドアロック＆本体初期化
+    }
+    if (doorFlg == 2) {
+      bthMain.BluetoothDoorOpen();    //ドアオープン
+    } else if (doorFlg == 1) {
+      bthMain.BluetoothDoorcloseRestart();    //ドアロック＆本体初期化
+    }
+    if (doorFlg == 2) {
       float moveVolt = sensorMain.sensorDetection(); //センサーの動きを検知
       if (moveVolt < 0.5) {
         wifiMain.WifiSendToLine(moveVolt); //振動をWi-FiでLINEに送信
@@ -62,5 +73,4 @@ void loop() {
 
   }
   //timerMain.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
-
 }

@@ -8,7 +8,7 @@ class mamoruBluetooth
     bool connected = 0;       // 接続状態格納用
     String data = "";         // 受信データ格納用
     int btn_pw = 0;           // 電源ボタン状態取得用
-    boolean flg; //Doorの状態
+    int flg; //Doorの状態
 
   public:
     void init();

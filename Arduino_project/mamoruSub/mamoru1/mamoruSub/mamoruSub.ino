@@ -18,10 +18,11 @@ void setup() {
   M5.begin();
   Serial.println("System Start");
   bthSub.init();
-  timerSub.init();
+  //timerSub.init();
 }
 
 void loop() {
+  M5.update();  // 本体のボタン状態更新
   bthSub.restart();    // 再起動（リスタート）処理
   bthSub.BluetoothButtonPush(); //ボタン操作時の操作
   bthSub.SerialBTSearching(); //SerialBTの読み取り(new)
@@ -30,4 +31,5 @@ void loop() {
   dispSub.batteryShow_Setup(); //バッテリー表示
 
   //timerSub.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
+
 }

@@ -45,6 +45,8 @@ void mamoruSubBluetooth::BluetoothButtonPush() {
 void mamoruSubBluetooth::SerialBTSearching() {
   if (SerialBT.available()) {               // Bluetoothデータ受信で
     data = SerialBT.readStringUntil('\r');
+    M5.Lcd.println(data);                   // 液晶表示は改行あり
+    Serial.print(data);                     // シリアル出力は改行なし
   }
 }
 

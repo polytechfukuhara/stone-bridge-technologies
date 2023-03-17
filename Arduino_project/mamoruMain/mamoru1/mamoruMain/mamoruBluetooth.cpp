@@ -55,12 +55,13 @@ void mamoruBluetooth::BluetoothDoorcloseRestart() {
   if (data == "A ON!") {      // 受信データが「A ON!」なら
     servoMoveBTH.lock_door(); //ドアの施錠
     flg = servoMoveBTH.getLockState(); //ドアの状態
-    if (flg == true) {
+    if (flg == 2) {
       digitalWrite(10, LOW);  // 本体LED点灯
       SerialBT.print("Door:ROCK!\r");
+      delay(10);
       data = "";
       //restart
-      ESP.restart(); //mainがAボタンを押した時にリスタート
+      ESP.restart(); //SubがAボタンを押した時にリスタート
     }
   }
 }
@@ -70,7 +71,7 @@ void mamoruBluetooth::BluetoothDoorOpen() {
   if (data == "B ON!") {      // 受信データが「B ON!」なら
     servoMoveBTH.open_door(); //ドアの施錠
     flg = servoMoveBTH.getLockState(); //ドアの状態
-    if (flg == false) {
+    if (flg == 1) {
       SerialBT.print("Door:OPEN!\r");
       digitalWrite(10, HIGH);   // 本体LED消灯
       data = "";
