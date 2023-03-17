@@ -6,7 +6,7 @@ class mamoruDisplay
     String slave_name = "BT_Slave";   // スレーブ側の接続名
     String master_name = "BT_master"; // マスターの接続名
     bool connected = 0;       // 接続状態格納用
-    int connect_count = 3;    // 再接続実行回数
+    int connect_count = 10;    // 再接続実行回数
     const int8_t BITS_PER_PIXEL     = 1;
     const int TRANS_PARENTS         = 0;
     const int MAX_SHOW_SIZE         = 7;

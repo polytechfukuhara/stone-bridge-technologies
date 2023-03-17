@@ -46,7 +46,7 @@ void loop() {
     dispMain.batteryShow_Setup(); //バッテリー表示
 
     int doorFlg = motorMain.getLockState(); //ドアの開閉状態を取得
-    
+
     Serial.println(doorFlg);
 
     //doorFlgにうまく戻り値が入らない為、現在はdoorFlg=0のみ動き
@@ -67,6 +67,11 @@ void loop() {
         dispMain.showEmergencyMove(); //振動を画面表示
       }
     }
+
+    //Lineへの通知（フェイク）（動かない）
+    wifiMain.WifiSendToLineFake();
+
+    
   } else { //10％以下なら
     motorMain.open_door(); //ドアオープン
     sleep_modeMain.SleepStart(0, 10); //スリープモード（低電圧）
