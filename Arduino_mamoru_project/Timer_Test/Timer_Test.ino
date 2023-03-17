@@ -3,25 +3,24 @@
 hw_timer_t * timer;
 volatile uint32_t isrCounter;
 
-int timeSleep;
-int frequency;
-
+int timeSleep = 0;
+int frequency = 20;
 
 void onTimer() {
   isrCounter++;
-  if (isrCounter == 180) {
+  Serial.println(isrCounter);
+  if (isrCounter == 15) {
     timerEnd(timer);
     timer = NULL;
     isrCounter = 0;
 
     M5.Axp.ScreenBreath(timeSleep);
-    setCpuFrequencyMhz(frequency);
+    //setCpuFrequencyMhz(frequency);
   }
 }
 
 void setup() {
   M5.begin();
-  Serial.begin(9600);
   Serial.println("System Start");
 
   timer = timerBegin(0, getApbFrequency() / 1000000, true);
@@ -39,5 +38,6 @@ void loop() {
     String msg = "BUTOON CLICK";
     M5.Lcd.print(msg);
     Serial.print(msg);
+    isrCounter = 0;
   }
 }
