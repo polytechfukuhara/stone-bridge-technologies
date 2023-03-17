@@ -15,7 +15,7 @@ void onTimer() {
     isrCounter = 0;
 
     M5.Axp.ScreenBreath(timeSleep);
-    //setCpuFrequencyMhz(frequency);
+    setCpuFrequencyMhz(frequency);
   }
 }
 
