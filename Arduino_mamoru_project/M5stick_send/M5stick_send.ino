@@ -67,6 +67,12 @@ void loop() {
   // put your main code here, to run repeatedly:
   M5.update();
 
+  if (M5.BtnA.wasPressed()) {
+    String msg = "振動を検知しました";
+    Line_notify(msg);
+  }
+  
+/*
   //センサー
   int val = analogRead(ADC_PIN);  // read the input pin
   float volt = Vref * float(val) / 4095.0; // 12bit
@@ -85,5 +91,5 @@ void loop() {
     }
   } else {
     volt = 3.3;
-  }
+  }*/
 }

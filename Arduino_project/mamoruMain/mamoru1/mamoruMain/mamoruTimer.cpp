@@ -9,7 +9,7 @@ mamoruSleep_mode sleep_modeTM;
 
 
 void mamoruTimer::init() {
-  timer = timerBegin(0, getApbFrequency() / 1000000, true);
+  timer = timerBegin(0, getApbFrequency() / 1000000, true); //一秒
   //timerAttachInterrupt(timer, &onTimer, true);
   timerAlarmWrite(timer, 1000000, true);
   timerAlarmEnable(timer);

@@ -68,3 +68,11 @@ void mamoruConnectWifi::WifiSendToLine(float volt) {
     volt = 3.3;
   }
 }
+
+//本体のAボタンを押すとLINEに通知が飛ぶ（）
+void mamoruConnectWifi::WifiSendToLineFake(){
+    if (M5.BtnA.wasPressed()) {
+    String msg = "振動を検知しました";
+    Line_notify(msg);
+  }
+}

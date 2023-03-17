@@ -70,7 +70,6 @@ void loop() {
   } else { //10％以下なら
     motorMain.open_door(); //ドアオープン
     sleep_modeMain.SleepStart(0, 10); //スリープモード（低電圧）
-
   }
   //timerMain.onTimer(); //180秒カウント＆スリープ(コメントアウト中)
 }

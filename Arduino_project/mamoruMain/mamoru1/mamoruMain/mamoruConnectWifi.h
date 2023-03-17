@@ -20,4 +20,5 @@ class mamoruConnectWifi
     void Line_notify(String msg);// LINE Notify処理関数
     void SensorSendOn();//振動センサーを送信可能
     void WifiSendToLine(float volt);//Lineへの通知(Brainで引数で振動のvoltを受け取る)
+    void WifiSendToLineFake(); //本体のAボタンを押すとLINEに通知が飛ぶ（フェイク）
 };
