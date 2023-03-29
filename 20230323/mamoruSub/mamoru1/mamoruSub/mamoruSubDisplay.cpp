@@ -1,6 +1,11 @@
 #include<M5StickCPlus.h>
 #include "BluetoothSerial.h"
 
+//********************
+//MAMORU Sub mamoruSubDisplay.cpp
+//********************
+
+
 //使用自作クラス
 #include"mamoruSubDisplay.h"
 #include"mamoruSubBattery.h"

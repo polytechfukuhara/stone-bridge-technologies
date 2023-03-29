@@ -2,6 +2,11 @@
 #include<ESP32Servo.h>
 #include "esp32-hal-ledc.h"
 
+//********************
+//MAMORU Main mamoruServo_Motor.cpp
+//********************
+
+
 //使用自作クラス
 #include"mamoruServo_Motor.h"
 

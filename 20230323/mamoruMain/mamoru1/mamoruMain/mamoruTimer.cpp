@@ -1,5 +1,10 @@
 #include<M5StickCPlus.h>
 
+//********************
+//MAMORU Main mamoruTimer.cpp
+//********************
+
+
 //使用自作クラス
 #include"mamoruTimer.h"
 #include"mamoruSleep_mode.h"

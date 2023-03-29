@@ -1,5 +1,9 @@
 #pragma once
 
+//********************
+//MAMORU Main mamoruSensor.h
+//********************
+
 class mamoruSensor
 {
   private:

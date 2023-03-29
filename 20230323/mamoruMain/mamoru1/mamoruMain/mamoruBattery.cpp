@@ -1,5 +1,10 @@
 #include<M5StickCPlus.h>
 
+//********************
+//MAMORU Main mamoruBattery.cpp
+//********************
+
+
 //使用自作クラス
 #include"mamoruBattery.h"
 

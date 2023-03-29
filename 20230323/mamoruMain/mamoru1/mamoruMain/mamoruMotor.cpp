@@ -1,5 +1,9 @@
 #include<M5StickCPlus.h>
 
+//********************
+//MAMORU Main mamoruMotor.cpp
+//********************
+
 //使用自作クラス
 #include"mamoruMotor.h"
 #include"mamoruServo_Motor.h"

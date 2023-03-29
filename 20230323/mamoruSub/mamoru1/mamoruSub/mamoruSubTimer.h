@@ -1,5 +1,10 @@
 #pragma once
 
+//********************
+//MAMORU Sub mamoruSubTimer.h
+//********************
+
+
 class mamoruSubTimer
 {
   private:

@@ -1,5 +1,10 @@
 #include<M5StickCPlus.h>
 
+//********************
+//MAMORU Main mamoruSensor.cpp
+//********************
+
+
 //使用自作クラス
 #include"mamoruSensor.h"
 

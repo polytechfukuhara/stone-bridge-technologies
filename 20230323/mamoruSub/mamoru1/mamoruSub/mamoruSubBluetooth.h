@@ -1,5 +1,10 @@
 #pragma once
 
+//********************
+//MAMORU Sub mamoruSubBluetooth.h
+//********************
+
+
 class mamoruSubBluetooth
 {
   private:

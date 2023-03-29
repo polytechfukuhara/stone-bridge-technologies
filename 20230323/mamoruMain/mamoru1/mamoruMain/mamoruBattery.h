@@ -1,4 +1,10 @@
 #pragma once
+
+//********************
+//MAMORU Main mamoruBattery.h
+//********************
+
+
 /**
    Batteryクラス
    電池残量を表示する。

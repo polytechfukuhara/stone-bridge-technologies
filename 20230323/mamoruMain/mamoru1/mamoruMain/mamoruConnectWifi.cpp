@@ -1,6 +1,10 @@
 #include<M5StickCPlus.h>
 #include <WiFiClientSecure.h>
 
+//********************
+//MAMORU Main mamoruConnectWifi.cpp
+//********************
+
 //使用自作クラス
 #include"mamoruConnectWifi.h"
 

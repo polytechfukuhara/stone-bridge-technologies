@@ -1,5 +1,10 @@
 #pragma once
 
+//********************
+//MAMORU Sub mamoruSubDisplay.h
+//********************
+
+
 class mamoruSubDisplay
 {
   private:

@@ -1,3 +1,8 @@
+
+//********************
+//MAMORU Main mamoruDisplay.cpp
+//********************
+
 #include<M5StickCPlus.h>
 #include "BluetoothSerial.h"
 

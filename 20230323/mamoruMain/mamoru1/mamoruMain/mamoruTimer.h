@@ -1,5 +1,8 @@
 #pragma once
 
+//********************
+//MAMORU Main mamoruTimer.h
+//********************
 
 class mamoruTimer
 {

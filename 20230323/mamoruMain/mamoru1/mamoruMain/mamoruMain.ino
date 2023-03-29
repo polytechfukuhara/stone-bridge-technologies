@@ -1,4 +1,7 @@
 #include<M5StickCPlus.h>
+//********************
+//MAMORU Main
+//********************
 
 //使用自作クラス
 #include"mamoruTimer.h"

@@ -1,5 +1,10 @@
 #pragma once
 
+//********************
+//MAMORU Main mamoruMotor.h
+//********************
+
+
 class mamoruMotor
 {
   private:

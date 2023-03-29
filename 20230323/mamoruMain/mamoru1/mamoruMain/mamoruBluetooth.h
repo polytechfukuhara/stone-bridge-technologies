@@ -1,5 +1,9 @@
 #pragma once
 
+//********************
+//MAMORU Main mamoruBluetooth.h
+//********************
+
 class mamoruBluetooth
 {
   private:

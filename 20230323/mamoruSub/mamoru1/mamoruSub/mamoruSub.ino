@@ -1,5 +1,10 @@
 #include<M5StickCPlus.h>
 
+//********************
+//MAMORU Sub
+//********************
+
+
 //使用自作クラス
 #include"mamoruSubTimer.h"
 #include"mamoruSubDisplay.h"

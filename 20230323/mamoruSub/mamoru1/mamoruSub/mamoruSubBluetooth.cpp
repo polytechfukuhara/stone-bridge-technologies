@@ -1,5 +1,9 @@
 // Bluetooth接続スレーブ側プログラム
 
+//********************
+//MAMORU Sub mamoruSubBluetooth.cpp
+//********************
+
 #include<M5StickCPlus.h>
 #include "BluetoothSerial.h"
 

@@ -1,5 +1,9 @@
 #pragma once
 
+//********************
+//MAMORU Main mamoruConnectWifi.h
+//********************
+
 class mamoruConnectWifi
 {
   private:
